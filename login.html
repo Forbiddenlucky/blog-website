@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Login Page</title>
+	<style>
+		/* Add some styling for the form */
+		form {
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+			justify-content: center;
+			width: 50%;
+			margin: 0 auto;
+			padding: 20px;
+			border: 1px solid #ccc;
+			border-radius: 5px;
+		}
+
+		/* Add some styling for the input fields */
+		input {
+			margin: 10px 0;
+			padding: 8px;
+			border: 1px solid #ccc;
+			border-radius: 5px;
+			width: 100%;
+		}
+
+		/* Add some styling for the submit button */
+		button {
+			padding: 10px;
+			border: none;
+			border-radius: 5px;
+			background-color: #4CAF50;
+			color: white;
+			font-size: 16px;
+			cursor: pointer;
+		}
+	</style>
+</head>
+<body>
+	<form>
+		<h1>Login</h1>
+		<!-- Add input fields for the username and password -->
+		<input type="text" placeholder="Username" id="username">
+		<input type="password" placeholder="Password" id="password">
+		<!-- Add a submit button -->
+		<button type="submit" onclick="login()">Log In</button>
+	</form>
+
+	<!-- Add a script to handle the login process -->
+	<script>
+		function login() {
+			// Get the values of the username and password fields
+			var username = document.getElementById("username").value;
+			var password = document.getElementById("password").value;
+
+			// Check if the username and password are correct
+			if (username == "admin" && password == "password") {
+				// If the username and password are correct, display a success message
+				alert("Successfully logged in!");
+			} else {
+				// If the username and password are incorrect, display an error message
+				alert("Incorrect username or password. Please try again.");
+			}
+		}
+	</script>
+</body>
+</html>
